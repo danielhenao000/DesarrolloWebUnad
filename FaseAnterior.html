@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg    bg-primary navbar-dark">
+        <span class="navbar-brand" href="#">Sistema De Gestión</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Administrador </a>
+            <a class="nav-item nav-link" href="inventario.html">Inventario</a>
+            <a class="nav-item nav-link" href="utilidades.html">Utilidades</a>
+            <a class="nav-item nav-link active" href="FaseAnterior.html">Fases anteriores</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="contenedor">
+        <h2>PROPUESTA DE PROYECTO DE DESARROLLO DE SOFTWARE</h2>
+
+        <b>Planteamiento del Problema</b></br>
+             “La tienda “Osaka Electronics” se dedica a la comercialización de componentes electrónicos tales como: resistencias, transistores, circuitos integrados, sistemas embebidos, condensadores, bobinas y demás elementos de uso común en la industria, control y automatización electrónica de procesos. Pero en los últimos días ha tenido inconvenientes con respecto a la cantidad de productos que ofrece a sus clientes, ya que en existencia aparece una cantidad y cuando se verifica en bodega dicha cantidad de productos no coincide, este descontrol ha generado problemas con los clientes y con los proveedores, por lo anterior requiere un aplicativo web que le permita controlar las compras a proveedores, ventas al público, inventarios y cálculo de precio de venta al público incluyendo impuestos (%) y utilidad para la tienda (%).”</br></br>
+        <b>Formulación del Problema</b></br>
+             ¿Cómo optimizar el proceso de control de inventario, compras a proveedores y gestión comercial de la empresa por medio del diseño de un aplicativo web?</br></br>
+        <h5><b>Objetivos</b></br></h5>
+        
+        <b>Objetivo General</b></br>
+        <ul>
+            <li>Diseñar e implementar un aplicativo web que permita el control del inventario teniendo en cuenta las compras a proveedores y las ventas a los clientes para optimizar la gestión comercial de la tienda Osaka Electronics.</li>
+        </ul>
+             
+        <b>Objetivos Específicos</b></br>
+        <ul>
+
+            <li>Definir la estructura de la aplicación web, acorde con los usuarios a quienes va dirigida.</li>
+        
+            <li>Diseñar la interfaz web donde listan los componentes electrónicos con la cantidad en inventario, el precio, el porcentaje de impuestos de venta, y el porcentaje de utilidad; y el proceso de interacción con los usuarios mediante el cual se realizará el control del inventario.</li>
+        
+            <li>Implementar una Base de Datos relacional para el proceso de control y almacenamiento de la información de inventario que refleje la concordancia entre existencias teóricas de los productos vs las existencias físicas teniendo en cuenta las compras a proveedores y las ventas al público.</li>
+        
+        </ul>
+        
+        <b>Metodología de desarrollo</b></br>
+             Se propone la utilización de la metodología SCRUM con Sprint de 2 semanas y los siguientes pasos:
+        <ol>    
+        <li>La definición de los objetivos de la aplicación web teniendo en cuenta el tipo de usuario que lo va a visitar.</li>
+        <li>Instalación y configuración del servidor apache, PHP y MySQL, y los lenguajes de programación HTML, CSS, JavaScript, Bootstrap.</li>
+        <li>Diseño del registro de las compras a proveedores el cual se realizará mediante formularios de proveedores donde se registren los datos de contacto, productos y precios. Para las compras, se llevará un registro de cada una de las adquisiciones enlazando el proveedor al cual se adquirió el producto, por medio de un formulario.</li>
+        <li>Diseño de un registro óptimo de los clientes. Se realizarán formularios de registro donde se almacenará la información de estos, esta información se enlazará a la compra por medio de la base de datos.</li>
+        <li>Diseño de la interfaz web donde se listan los componentes electrónicos con la cantidad en inventario, teniendo en cuenta las compras a proveedores y las ventas al público realizadas. </li>
+        <li>Diseño del registro de productos con el precio, el porcentaje de impuestos de venta, y el costo de compra, para poder realizar el cálculo de utilidad.</li>
+        <li>Diseño de la opción para la generación de reportes de utilidades. </li>
+        <li>La implementación de los diseños de anteriores para el proceso de interacción con el usuario.</li>
+        <li>El diseño del lado del servidor con todos los requisitos solicitados en el planteamiento del problema.</li>
+        <li>La implementación del diseño del lado del servidor, el cual permitirá almacenar la información ingresada en los formularios, realizar las consultas de información requeridas por el usuario cliente.</li>
+        <li>Realización de pruebas para la evaluación el sitio web.</li>
+        <li>Puesta en operación del sitio web solicitado.</li>
+        </ol> 
+        
+
+      </div>
+    
+        
+    
+</body>
+</html>
