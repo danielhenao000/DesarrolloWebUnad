@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
     <nav class="navbar navbar-expand-lg    bg-primary navbar-dark">
@@ -25,7 +25,98 @@
           </div>
         </div>
       </nav>
+      <div class="contenedor2">
+        <div class="contenedor1">
+          <h3>Calcular Venta</h3>
+          <span>Valor de compra ($)</span><input type="text" name="" id="varVal" class="form-control">
+          <span>% utilidad o ganancia</span><input type="text" name="" id="varGan" class="form-control">
+          <span>% IVA</span><input type="text" name="" id="varIva" class="form-control"></br>
+          <button type="button" class="btn btn-light btn1" onclick="calcular();">Calcular Venta</button></br></br>
+          <h4 class="result">Valor de venta: $ <span id="valorVenta">0</span></b></br>
+          <span>Ganancia: $ </span><span id="ganancia">0</span></br></h4>
+        </div>
+        <div class="contenedor1">
+          <h3>Resistencias Eléctricas</h3>
+          <span>1° Banda</span>
+          <div class="form-group">
+            <select class="form-control" id="banda1">
+              <option value="0" >Negro</option>
+              <option value="1" >Cafe</option>
+              <option value="2" >Rojo</option>
+              <option value="3" >Naranja</option>
+              <option value="4" >Amarillo</option>
+              <option value="5" >verde</option>
+              <option value="6" >Azul</option>
+              <option value="7" >Violeta</option>
+              <option value="8" >Gris</option>
+              <option value="9" >Blanco</option>
+            </select>
+          </div>
+          <span>2° Banda</span>
+          <div class="form-group">
+            <select class="form-control" id="banda2">
+              <option value="0" >Negro</option>
+              <option value="1" >Cafe</option>
+              <option value="2" >Rojo</option>
+              <option value="3" >Naranja</option>
+              <option value="4" >Amarillo</option>
+              <option value="5" >verde</option>
+              <option value="6" >Azul</option>
+              <option value="7" >Violeta</option>
+              <option value="8" >Gris</option>
+              <option value="9" >Blanco</option>
+            </select>
+          </div>
+          <span>3° Banda</span>
+          <div class="form-group">
+            <select class="form-control" id="banda3">
+              <option value="1" >Negro</option>
+              <option value="10" >Cafe</option>
+              <option value="100" >Rojo</option>
+              <option value="1000" >Naranja</option>
+              <option value="10000" >Amarillo</option>
+              <option value="100000" >verde</option>
+              <option value="1000000" >Azul</option>
+              <option value="10000000" >Violeta</option>
+              <option value="100000000" >Gris</option>
+              <option value="1000000000" >Blanco</option>
+            </select>
+          </div>
+        </br>
+          <h5 class="result">Valor de resistensia:</br> (<span id="valorRes">0</span>) Ohmios</b></br></br></h5>
+          <button type="button" class="btn btn-light btn1" onclick="resistensia();">Calcular Resistencia</button></br></br>
+          
+        </div>  
+        
+        <img src="imagen.png" />
+
+      </div>
+<script>
+  let varVal = document.getElementById("varVal");
+  let varGan = document.getElementById("varGan");
+  let varIva = document.getElementById("varIva");
+  
+ 
+
+  function calcular(){
+  
+    let varGanPor = ((varVal.value * (varGan.value/100)));
+    let varIvaPor = ((varVal.value * (varIva.value/100)));
+
+    document.getElementById('valorVenta').innerHTML = Number(varVal.value) + Number(varGanPor) + Number(varIvaPor);
+    document.getElementById('ganancia').innerHTML = Number(varGanPor);
+  }
+
+  function resistensia(){
+      let b1 = document.getElementById("banda1");
+      let b2 = document.getElementById("banda2");
+      let b3 = document.getElementById("banda3");
+      let res1 = b1.value+b2.value
+      document.getElementById('valorRes').innerHTML = Number(res1*b3.value);
     
+  }
+
+</script> 
         
     
 </body>
